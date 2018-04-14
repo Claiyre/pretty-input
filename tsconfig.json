@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": false,
+    "target": "es5",
+    "sourceMap": true
+  },
+  "include": ["src/"]
+}
