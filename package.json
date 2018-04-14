@@ -1,0 +1,24 @@
+{
+  "name": "prettyinput",
+  "version": "1.0.0",
+  "description": "customize your input style freely",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Claiyre/prettyInput.git"
+  },
+  "keywords": [
+    "input",
+    "style",
+    "pretty"
+  ],
+  "author": "Claiyre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Claiyre/prettyInput/issues"
+  },
+  "homepage": "https://github.com/Claiyre/prettyInput#readme"
+}
