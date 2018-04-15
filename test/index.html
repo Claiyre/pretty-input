@@ -5,32 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>pretty input</title>
-  <style>
-  #file:focus + label{
-    outline: 1px solid #a6c7ff;
-    outline: -webkit-focus-ring-color auto 5px;
-  }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <form action="">
-    <label for="checkbox">checkbox</label>
+    <h2>原生Input</h2>
+    <label for="checkbox">checkbox:</label>
     <input type="checkbox" name="checkbox" id="checkbox"> <br>
-    <label for="radio">radio</label>
+    <label for="radio">radio:</label>
     <input type="radio" name="radio" id="radio">
-    <input type="radio" name="radio" id="radio2"> <br>
-    <label for="file">file</label>
+    <input type="radio" name="radio" id="radio1"> <br>
+    <label for="file">file:</label>
     <input type="file" name="file" id="file">
   </form>
 
 
   <form action="">
-    <input type="radio">
-    <input type="checkbox">
-    <input type="file" name="file2" id="file2">
+    <h2>prettyInput</h2>
+    <label for="checkbox2">checkbox:</label>
+    <input type="checkbox" name="checkbox" id="checkbox2"> <br>
+    <label for="radio2">radio:</label>
+    <input type="radio" name="radio2" id="radio2">
+    <input type="radio" name="radio2" id="radio21"> <br>
+    <label for="file2">file:</label>
+    <input type="file" name="file" id="file2"> <br>
+    <label for="file3">file(with name):</label>
+    <input type="file" name="file" id="file3"> <br>
   </form>
 
   <script src="./index.js"></script>
-  </script>
 </body>
 </html>

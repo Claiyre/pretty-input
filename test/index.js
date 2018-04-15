@@ -1,4 +1,4 @@
 import handleInput from '../src/index.ts'
 
-handleInput('#file');
-handleInput('#file2')
+handleInput('#file2', {isFile:true, showFileName: false});
+handleInput('#file3');
