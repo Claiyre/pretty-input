@@ -1,9 +1,15 @@
 import {cssText, hidden, focus} from './style';
+import typeFileHandle from './file'
 
 let style = null;
 
-
-export default function handler(selector:any, innerElement?:string){
+export interface fileArgs {
+  isFile: boolean,
+  innerText?: string,
+  innerElement?: string|object,
+  showFileName?: boolean
+}
+export default function handler(selector:any, args?:fileArgs){
   if (typeof window === 'undefined') {
     console.error('prettyInput only works on browser.')
     return
@@ -30,22 +36,22 @@ export default function handler(selector:any, innerElement?:string){
       console.warn(`could not found ${ele} in current page`);
       continue;
     }
-    let label = document.createElement('label');
     if(!ele.id) ele.id = `pretty_${parseInt((Math.random()*100).toString(), 10)}`
+
+    let label = document.createElement('label');
     label.htmlFor = ele.id;
     label.className = `pretty_label pretty_label_${ele.type}`;
-    inputIds = inputIds ? inputIds+`,#${ele.id} `: `#${ele.id}`;
-    inputLabels = inputLabels ? inputLabels+`,#${ele.id}:focus + label.pretty_label `: `#${ele.id}:focus + label.pretty_label`;
+
     // input[type='file']
     if(ele.type.match(/file/i)){
-      if(!innerElement) innerElement = '<span class="pretty_btn">upload file</span>';
-      label.innerHTML = innerElement;
+      typeFileHandle(ele, label, args);
     }
-
     ele.parentNode.insertBefore(label, ele.nextSibling);
+    inputIds = inputIds ? inputIds+`,#${ele.id} `: `#${ele.id}`;
+    inputLabels = inputLabels ? inputLabels+`,#${ele.id}:focus + label.pretty_label `: `#${ele.id}:focus + label.pretty_label`;
   }
 
-  // 插入其他公共样式
+  // 插入样式
   if(!style){
     style = document.createElement('style');
     style.innerHTML = cssText;
