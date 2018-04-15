@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>pretty input</title>
+  <style>
+  #file:focus + label{
+    outline: 1px solid #a6c7ff;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  </style>
+</head>
+<body>
+  <form action="">
+    <label for="checkbox">checkbox</label>
+    <input type="checkbox" name="checkbox" id="checkbox"> <br>
+    <label for="radio">radio</label>
+    <input type="radio" name="radio" id="radio">
+    <input type="radio" name="radio" id="radio2"> <br>
+    <label for="file">file</label>
+    <input type="file" name="file" id="file">
+  </form>
+
+
+  <form action="">
+    <input type="radio">
+    <input type="checkbox">
+    <input type="file" name="file2" id="file2">
+  </form>
+
+  <script src="./index.js"></script>
+  </script>
+</body>
+</html>
