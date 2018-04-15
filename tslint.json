@@ -15,8 +15,7 @@
                 "debug",
                 "info",
                 "log",
-                "time",
-                "timeEnd",
+                "warn",
                 "trace"
             ]
         }

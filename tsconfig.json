@@ -3,7 +3,8 @@
     "module": "commonjs",
     "removeComments": false,
     "target": "es5",
-    "sourceMap": true
+    "sourceMap": true,
+    "outDir": "./dist"
   },
   "include": ["src/"]
 }
