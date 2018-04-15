@@ -4,7 +4,8 @@
   "description": "customize your input style freely",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "parcel test/index.html -p 8089 --out-dir testout",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Claiyre/prettyInput/issues"
   },
-  "homepage": "https://github.com/Claiyre/prettyInput#readme"
+  "homepage": "https://github.com/Claiyre/prettyInput#readme",
+  "devDependencies": {
+    "typescript": "^2.8.1"
+  }
 }
