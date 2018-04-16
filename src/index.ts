@@ -6,7 +6,7 @@ let style = null;
 export interface fileArgs {
   isFile: boolean,
   innerText?: string,
-  innerElement?: string|object,
+  innerElement?: any,
   showFileName?: boolean
 }
 export default function handler(selector:any, args?:fileArgs){
@@ -37,16 +37,10 @@ export default function handler(selector:any, args?:fileArgs){
       continue;
     }
     if(!ele.id) ele.id = `pretty_${parseInt((Math.random()*100).toString(), 10)}`
-
-    let label = document.createElement('label');
-    label.htmlFor = ele.id;
-    label.className = `pretty_label pretty_label_${ele.type}`;
-
     // input[type='file']
     if(ele.type.match(/file/i)){
-      typeFileHandle(ele, label, args);
+      typeFileHandle(ele, args);
     }
-    ele.parentNode.insertBefore(label, ele.nextSibling);
     inputIds = inputIds ? inputIds+`,#${ele.id} `: `#${ele.id}`;
     inputLabels = inputLabels ? inputLabels+`,#${ele.id}:focus + label.pretty_label `: `#${ele.id}:focus + label.pretty_label`;
   }
