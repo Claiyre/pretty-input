@@ -1,0 +1,10 @@
+.idea/
+~*
+node_modules/
+*.log
+.cache/
+testout/
+src/
+tsconfig.json
+tslint.json
+test/

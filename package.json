@@ -1,8 +1,8 @@
 {
-  "name": "prettyinput",
+  "name": "pretty-input",
   "version": "1.0.0",
   "description": "customize your input style freely",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "parcel test/index.html -p 8089 --out-dir testout",
     "build": "tsc"
